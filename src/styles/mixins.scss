@@ -1,0 +1,26 @@
+@import "./fonts.scss";
+
+@mixin container($bgColor, $dirr, $just, $align, $padd, $gap) {
+    background-color: $bgColor;   
+    display:flex;
+    flex-direction: $dirr; 
+    justify-content: $just;
+    align-items: $align;
+    padding: $padd;
+    gap: $gap;
+}
+
+@mixin btn ($color,$textSize,$textColor,$PY, $PX ){
+    background-color: $color;
+    border:none;
+    border-radius: 6px;
+    font-size: $textSize;
+    font-family: $regular;
+    color: $textColor;
+    padding: $PY $PX;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}

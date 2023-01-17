@@ -1,0 +1,125 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+
+
+
+
+.cardContainer{
+    width: 35vh;
+    height: 50vh;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #999;
+    padding-bottom: 0.5em;
+
+    &:hover{
+        box-shadow: 4px 4px 5px #999;
+    }
+    
+    .weatherPhoto{
+        background:url('https://images.unsplash.com/photo-1596869628264-2344d70a73ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2xvdWQlMjBhZXN0aGV0aWN8ZW58MHx8MHx8&w=1000&q=80');
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        width: 100%;
+        height: 75%;
+        margin-bottom: 1em;
+    }
+
+    .data{
+        padding: 0em 1em;
+    }
+}
+
+//! MENU1
+
+.menuItemsContainer1{
+    .upContainer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1em;
+
+        
+            
+            input{
+                outline: none;
+                background-color: white;
+                border-radius: 5px;
+                border: none;
+                padding: 1em;
+                font-family: $regular;
+                width: 100%;
+                box-sizing: border-box;
+                color: grey;
+                font-size: 1.7em;
+                
+            }
+    
+            .btnSearch{
+                @include btn ($sky,1.7em,white,1em, 1em );
+                width: 100%;
+
+                &:hover{
+                    cursor: pointer;
+                    border:5px solid $blue;
+                    background-color: $light;
+                    color:$blue
+                    }
+            }
+            .btnDark{
+                @include btn ($blue,1.7em,white,1em, 1em );
+                width: 100%;
+                &:hover{
+                    cursor: pointer;
+                    border:5px solid $blue;
+                    background-color: $light;
+                    color:$blue
+                    }
+            }
+        
+
+    }
+    .downContainer{
+        text-align: center;
+        p{
+            color:$blue;
+            font-size: 1.7em;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.emptyCard{
+    background-color: $blue;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    padding:1.5em 2em;
+    h1{
+        font-size: 4.5em;
+        color:white;
+    }
+    img{
+        filter: invert(200%);
+    }
+    p{
+        color:$orange
+    }
+    .iconContainer{
+        display:flex;
+        flex-direction: row;
+        gap:0.6em
+    }
+
+}
+
+
+

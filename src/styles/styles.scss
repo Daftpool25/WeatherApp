@@ -1,0 +1,268 @@
+@import "./colors.scss";
+@import "./mixins.scss";
+@import "./fonts.scss";
+@import "./elements.scss";
+
+
+html, body, #root{  
+    margin: 0px;
+    padding: 0px;
+    background-color: $light; 
+}
+
+
+
+
+
+h1{
+    font-family: $bold;
+    color:$blue
+}
+
+p{
+    font-family: $regular; 
+    color:grey;
+}
+
+//!CONTAINER
+//?$bgColor, $dirr, $just, $align, $padd, $gap)
+
+.all{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin:1em;
+    gap:1em;
+
+    .menu{
+        width: 100%;   
+    }
+
+    .generalContainer{
+
+
+
+        .homeContainer{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            gap:1em;
+            @media screen and (max-width:600px){
+                justify-content: center;
+                align-items: center;
+            }
+
+            .cardsContainer{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                row-gap: 1em;
+                width: 100%; 
+
+
+                .filter{
+                    width: 35vh;
+                    height: 51vh;
+                    box-shadow: 2px 2px 5px #999;
+                    text-align: center;
+                    @include container( white, column, center, space-around, none,none);
+                    gap:3em;
+                    @media screen and (max-width:884px){
+                        width: 100%;
+                        height:auto;
+                        gap:0em;
+                        padding:1em 0em;
+                        border-radius: 7px;
+                        box-shadow:none;
+                    }
+                    hr{
+                        width: 85%;
+                        height: 3px;
+                        background-color:$light;
+                        border:none;
+                        box-shadow: none;
+                    }
+                    p{
+                        font-size: 1.5em;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+        
+                }
+
+                span{
+                    width: 7em;
+                    height: 7em;
+                } 
+                .aboutUsContainer{
+                    background-image: url("https://w0.peakpx.com/wallpaper/215/62/HD-wallpaper-sun-leaves-and-blue-sky.jpg");
+                    background-position: top;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    box-shadow: 2px 2px 5px #999;
+                    width: 100%;
+                    text-align: right;
+                    padding: 2em 2em;
+                    border-radius: 0px;
+                    background-color: rgba(0, 0, 0, 0.301);
+                    background-blend-mode: darken;
+                    p{
+                        color:white;
+                        font-size: 1.7em;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                
+                } 
+
+            }
+            .cardsContainerEmpty{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                text-align: center;
+                gap: 1em;
+                .filter{
+                    @include container( white, column, center, center, none,none);
+                    border-radius: 4px;
+                    width: 35vh;
+                    height: 51vh;
+                    text-align: center;
+                    gap:3em;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                    @media screen and (max-width:884px){
+                        width: 100%;
+                    }
+                    hr{
+                        width: 85%;
+                        height: 3px;
+                        background-color:$light;
+                        border:none;
+                        box-shadow: none;
+                    }
+                    p{
+                        font-size: 1.5em;
+                    }
+        
+                }
+            }
+            .aboutUsContainer{
+                background-image: url("https://w0.peakpx.com/wallpaper/215/62/HD-wallpaper-sun-leaves-and-blue-sky.jpg");
+                background-position: top;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 100%;
+                text-align: right;
+                padding: 2em 2em;
+                border-radius: 8px;
+                background-color: rgba(0, 0, 0, 0.301);
+                background-blend-mode: darken;
+                p{
+                    color:white;
+                    font-size: 1.7em;
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+}
+
+
+//!CITY
+.cityContainer{
+    border-radius: 7px;
+    background:url('https://img.wattpad.com/0c087049cf11b6a1608ab8f7e7bf98a723ca7e57/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6335334f464847727145784774773d3d2d37392e313535666235636434616634623364353136383239393837373638382e6a7067');
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.315);
+    background-blend-mode: darken;
+    padding: 1em 0em;
+
+    .cityDataContainer{
+        @include container( none, column, auto, center, 0em, 0em);
+        width: 100%;
+        p{
+            font-size: 1.7em;
+        }
+        h1{
+            font-family: $logo;
+            color:white;
+            font-size: 3em;
+            text-align: center
+        }
+        .cityDetails{
+            @include container( none, row, center, center, 0em, 0em);
+            margin:0em 1em;
+            flex-wrap: wrap;
+            gap:1em;
+            border-radius: 5px;
+            overflow: hidden;
+
+            .cityBlock{
+                background-color: rgba(255, 255, 255, 0.712);
+                flex:auto;
+                padding: 3em 0.6em;
+                text-align: center;
+
+                &:hover{
+                    background-color:white;
+                    transition: 1s;
+                }
+            }
+            .tittleBlock{
+                color:$blue;
+                font-weight: 700
+            }
+        }
+
+
+        .btnCityContainer{
+            @include container(none, row, auto, auto, 1em, 1em);
+            flex-wrap: wrap;
+            padding-bottom: 0em;
+            width: 100%;
+            box-sizing: border-box;
+            button{
+                @include btn ($blue,1.7em,white,1em, 1em );
+                flex: auto;
+                &:hover{
+                    cursor: pointer;
+                    color:$sky;
+                    background-color: none;
+                    border: 3px solid $sky;
+                    color:$orange;                }
+            }
+            .deleteBtn{
+                @include btn ($orange,1.7em,$blue,1em, 1em );
+                width: 100%;
+                &:hover{
+                    cursor: pointer;
+                    color:$sky;
+                    background-color: none;
+                    border: 3px solid $sky;}
+            }
+        }
+    }
+}
+
+//!ABOUT
+.about{
+    @include container(none, row, space-around, center, 1em, none);
+    flex-wrap: wrap;
+    row-gap: 0.8em;
+
+    p{
+        text-decoration: none;
+    }
+}
+
