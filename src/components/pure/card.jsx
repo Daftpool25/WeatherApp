@@ -64,6 +64,7 @@ function Card({weather,tittle,selectCard,id}) {
           <div className="data">
               <h1>{weather}</h1>
               <p>{tittle}</p>
+             
           </div>
         </div>
   )

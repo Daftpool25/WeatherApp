@@ -20,9 +20,9 @@ function CardsContainer({favCities,selected,sortName, sortWeather}) {
   return (
     <div className={favCities.length > 0? "cardsContainer":"cardsContainerEmpty"}>
     <div className='filter'>
-        <p onClick={sortName}>Order by Name</p>
+        <label onClick={sortName}>Order by Name</label>
     <hr/>
-        <p onClick={sortWeather}>Order by Weather</p>
+        <label onClick={sortWeather}>Order by Weather</label>
     </div>
       {favCities.length ===0 && 
       <div className='emptyCard'>

@@ -3,15 +3,19 @@
 @import "./fonts.scss";
 
 
-
+//!CITY CARD
 
 .cardContainer{
-    width: 35vh;
-    height: 50vh;
+    min-width: 35vh;
+    max-width:auto;
+    min-height: 50vh;
+    max-height: max-content;
     background-color: white;
     cursor: pointer;
     box-shadow: 2px 2px 5px #999;
     padding-bottom: 0.5em;
+    box-sizing: border-box;
+
 
     &:hover{
         box-shadow: 4px 4px 5px #999;
@@ -23,21 +27,22 @@
         background-repeat: none;
         background-size: cover;
         width: 100%;
-        height: 75%;
-        margin-bottom: 1em;
+        min-height: 38vh;
+        
     }
 
     .data{
-        padding: 0em 1em;
+        box-sizing: border-box;
+        margin: 0em 1em;
     }
 }
 
-//! MENU1
+//! MENU
 
-.menuItemsContainer1{
-    .upContainer{
+    .menuItemsContainer{
         display: flex;
         flex-direction: row;
+        width: 100%;
         flex-wrap: wrap;
         gap: 1em;
 
@@ -68,31 +73,12 @@
                     color:$blue
                     }
             }
-            .btnDark{
-                @include btn ($blue,1.7em,white,1em, 1em );
-                width: 100%;
-                &:hover{
-                    cursor: pointer;
-                    border:5px solid $blue;
-                    background-color: $light;
-                    color:$blue
-                    }
-            }
-        
+       
 
     }
-    .downContainer{
-        text-align: center;
-        p{
-            color:$blue;
-            font-size: 1.7em;
-            &:hover{
-                cursor: pointer;
-            }
-        }
-    }
-}
 
+
+//!DARK BLUE CARD WITH ICONS
 
 .emptyCard{
     background-color: $blue;
@@ -119,6 +105,12 @@
         gap:0.6em
     }
 
+}
+
+//!TOASTER
+
+.toast{
+    font-family: $regular;
 }
 
 

@@ -19,7 +19,7 @@ h1{
     color:$blue
 }
 
-p{
+p,label{
     font-family: $regular; 
     color:grey;
 }
@@ -63,17 +63,18 @@ p{
 
 
                 .filter{
+                    padding: 0em 0.5em;
                     width: 35vh;
-                    height: 51vh;
+                    min-height: 51vh;
+                    max-height: auto;
                     box-shadow: 2px 2px 5px #999;
                     text-align: center;
-                    @include container( white, column, center, space-around, none,none);
-                    gap:3em;
+                    
+                    @include container( white, column, space-evenly, center, none,none);
                     @media screen and (max-width:884px){
                         width: 100%;
                         height:auto;
                         gap:0em;
-                        padding:1em 0em;
                         border-radius: 7px;
                         box-shadow:none;
                     }
@@ -84,7 +85,7 @@ p{
                         border:none;
                         box-shadow: none;
                     }
-                    p{
+                    label{
                         font-size: 1.5em;
                     }
                     &:hover{
@@ -128,17 +129,14 @@ p{
                 text-align: center;
                 gap: 1em;
                 .filter{
-                    @include container( white, column, center, center, none,none);
+                    @include container( white, column, space-evenly, center, none,none);
+                    padding:0em 0.5em;
                     border-radius: 4px;
                     width: 35vh;
                     height: 51vh;
                     text-align: center;
-                    gap:3em;
                     &:hover{
                         cursor: pointer;
-                    }
-                    @media screen and (max-width:884px){
-                        width: 100%;
                     }
                     hr{
                         width: 85%;
@@ -147,7 +145,11 @@ p{
                         border:none;
                         box-shadow: none;
                     }
-                    p{
+                    @media screen and (max-width:884px){
+                        width: 100%;
+                        padding: 1em 0em;
+                    }
+                    label{
                         font-size: 1.5em;
                     }
         
@@ -178,7 +180,7 @@ p{
 }
 
 
-//!CITY
+//!CITY INFORMATION AND DETAILS PAGE
 .cityContainer{
     border-radius: 7px;
     background:url('https://img.wattpad.com/0c087049cf11b6a1608ab8f7e7bf98a723ca7e57/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f6335334f464847727145784774773d3d2d37392e313535666235636434616634623364353136383239393837373638382e6a7067');
@@ -254,6 +256,8 @@ p{
         }
     }
 }
+
+
 
 //!ABOUT
 .about{

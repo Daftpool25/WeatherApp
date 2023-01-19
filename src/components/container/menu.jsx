@@ -6,9 +6,8 @@ function Menu({search}) {
   
 
   return (
-      <div className="menuItemsContainer1" id='menuContainer'>
 
-        <div className='upContainer'>
+        <div className='menuItemsContainer' id='menuContainer'>
               
                   <input type="text" value={searchValue} onChange={e => setSearchValue(e.target.value)} placeholder='Search a city'/>
                  <button className="btnSearch" onClick={() => search(searchValue)}>
@@ -17,8 +16,6 @@ function Menu({search}) {
                   </button>
         </div>
 
-
-      </div>
   )
 }
 

@@ -1,9 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import {Link, Route, Routes, BrowserRouter, useParams} from "react-router-dom";
 import Menu from './components/container/menu';
 import Home from "./components/page/home";
 import About from "./components/page/about";
 import City from "./components/page/city";
+import toast, { Toaster } from 'react-hot-toast';
 import axios from 'axios';
 import "./styles/styles.scss"
 
@@ -62,7 +63,14 @@ function App() {
               addCity(newCity);
               setCatchState(true);
             }).
-            catch((error) => alert(error))
+            catch((error) => {
+              if(city===""){
+                toast.error("Please, fill the search input");
+                
+              } else{
+                  toast.error(error)
+              }
+            })
         }
 
 
@@ -84,11 +92,13 @@ function App() {
         favCities.map( item => 
           {if(item.id===ref.id){count++}})
 
-        if(count>0){alert("Already Exist")}else{
-          setFavCities(prev => [...prev,ref])
+        if(count>0){toast.error("Already Exist")}else{
+          setFavCities(prev => [...prev,ref]);
+          toast.success("New city card created!")
         }
       }else{
-        setFavCities(prev => [...prev,ref])
+        setFavCities(prev => [...prev,ref]);
+        toast.success("New city card created!")
       }     
 
     }
@@ -105,6 +115,7 @@ function App() {
     function remove (id){
       const newList= favCities.filter( item => item.id !== id);
       setFavCities(newList);
+      toast.success("City deleted")
     }
 
 
@@ -156,8 +167,8 @@ function App() {
               </main> 
             }
                 <div className='generalContainer'>
+                <Toaster toastOptions={{className:"toast", duration:5000}}/>
 
-                  
                     <Routes>
                         <Route exact path='/' element={<Home
                             favCitiesList={favCities}

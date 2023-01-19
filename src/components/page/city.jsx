@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
  import { useNavigate, useParams } from 'react-router-dom';
 
 
@@ -28,6 +29,7 @@ function City({id,icon,cityName, country, altitude, latitude, weather, descripti
 
   return (
     <div className="cityContainer">
+      <Toaster toastOptions={{className:"toast", duration:5000}}/>
       {
         id?
           <div className="cityDataContainer">
