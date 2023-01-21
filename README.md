@@ -3,6 +3,8 @@
 # WeatherApp
 Weather app created in React, which consumes the API provided by OpenWeatherMap. Here I applied a routing of the different cities, and actions to watch, create and delete based on the json object obtained in the calls to the API.
 
+The aesthetic is based on PANTONE cards, so I used a palette of pastel colors throughout the app. In addition to being responsive and being able to apply filters to order the cards, they change the image according to the current weather in the city. You can access more details about the top by clicking each card.
+
 ## Deployed in: https://cerulean-rugelach-a0ee7f.netlify.app/
 
 
