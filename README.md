@@ -44,11 +44,12 @@ The aesthetic is based on PANTONE cards, so I used a palette of pastel colors th
   <li>React</li>
   <li><a href="https://react-hot-toast.com/">React Host Toast</a></li>
   <li><a href="https://openweathermap.org/current#geo">Open Weather Map</a></li>
+   <li><a href="https://axios-http.com/">AXIOS </a></li>
 </ul>
 
 
 
 
 # Technologies:
-Javascript, react.js, SASS
+Javascript, react.js, SASS, Axios
 
